@@ -1,0 +1,150 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #3a8dde, #a1c4fd);
+    color: white;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, #1c4dab, #6a8edd);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.corn{
+    filter: invert(); /*change la couleur des images*/
+    mix-blend-mode: lighten; /* change le fond des images*/
+    width: 150px;
+    
+}
+
+.title {
+    font-size: 24px;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.search-bar {
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    flex: 1;
+    max-width: 300px;
+    min-width: 5px;
+    font-size: 16px;
+    color: #333;
+
+}
+
+.research-form {
+    margin-right: 50px;
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+
+.research-button {
+    background: none;
+    border: none;
+    color: black;
+    width: fit-content;
+    position: relative;
+    left: -45px;
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+    width: 0;
+}
+
+
+.content {
+    padding: 20px;
+}
+
+#site-title:visited {
+    color: rgb(180, 180, 180);
+}
+
+
+
+.circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-right: 15px;
+}
+
+.text {
+    max-width: 600px;
+    
+}
+
+.text h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+article {
+    margin: 20px 0;/*marge*/
+    background: linear-gradient(to right, #3a8dde, #a1c4fd);/* transition de couleur */
+    padding: 20px;/*padding simple*/
+    border-radius: 10px; /*coin arrondi*/
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* ombre */
+    transition: transform 0.3s; /* transition */
+}
+
+article:hover {
+    transform: scale(1.02); /* transition avec agrr=andissement */
+}
+
+#form-input {
+    display: none;
+    position: absolute;
+}
+
+.page-input {
+    display: none;
+    position: absolute;
+}
+
+
+.pages-button {
+    background: linear-gradient(to right, #1c4dab, #6a8edd);/*couleur*/
+    color: white;/*couleur du texte*/
+    border: none;/*pas de bordure*/
+    padding: 10px 20px;/*le padding basique*/
+    border-radius: 20px;/*forme des coins arrondis*/
+    font-size: 16px;/*taille*/
+    font-family: Arial, sans-serif;/*police*/
+    cursor: pointer;/*petite main*/
+    outline: none;/*pas de contour*/
+    transition:  0.3s ease, transform 0.2s ease; /* transition */
+}
+
+.pages-button:hover {
+    background: linear-gradient(to left, #3a8dde, #a1c4fd);/* transition de couleur */
+    transform: translateY(-2px);/* transition agréable*/
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);/* transition ombre*/
+}
+

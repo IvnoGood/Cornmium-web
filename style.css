@@ -1,0 +1,130 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #3a8dde, #a1c4fd);
+    width: 100%;
+}
+
+/* Container for the elements */
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+/* Logo styling */
+.logo {
+    /* flex: 2;
+    max-width: 300px; */
+    width: 200px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.research-fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 23px;
+    position: relative;
+}
+
+/* Search bar styling */
+.search-bar {
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    height: 40px; 
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+    border-radius: 20px;
+    border: none;
+    flex: 1;
+    max-width: 450px;
+    min-width: 5px;
+}
+
+.research-button-field {
+    background-color: transparent;
+    border: none;
+    height: 20px;
+    position: relative;
+    top: -12px;
+    left: -30px;
+    cursor: pointer;
+}
+
+.research-button-field:hover {
+    color: rgb(114, 114, 114);
+}
+
+/* Button styling */
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-button:hover {
+    background-color: #357abd;
+}
+
+form {
+    display: flex;
+    width: 100%;
+}
+footer{
+    background: linear-gradient(to left, #3a8dde, #a1c4fd);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    width: 100%;
+    color: white;
+}
+.prv{
+    width: 55px; /* Defini la taille des images*/
+    filter: invert(); /*change la couleur des images*/
+    mix-blend-mode: lighten; /* change le fond des images*/
+}
+.image-container {
+    justify-content: center; /* Centre l'image horizontalement */
+    align-items: center; /* Centre l'image verticalement */
+    width: 60px; /* Largeur du conteneur */
+    height: 60px; /* Hauteur du conteneur */
+    border-radius: 50%; /* Rend le conteneur circulaire */
+    border: 2px solid white; /* Bordure blanche */
+    margin: 15px; /* Ajoute un espacement autour du conteneur */
+    display: inline-block; /* Affiche les conteneurs en ligne*/
+}
+.info{
+    color: white;
+}
