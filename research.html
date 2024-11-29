@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cornmium</title>
+    <link rel="stylesheet" href="research.css">
+    <link rel="shortcut icon" href="./image/logo2.ico" type="image/x-icon">
+
+
+    <!-- google fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="index.html"><img src="./image/logo2.png" alt="Logo" class="logo"></a>
+        <img src="./image/logo-search.png" alt="" class="corn"> 
+        <form class="research-form" action="" method="get">
+            <input type="text" placeholder="Search here:" class="search-bar" name="research">
+            <button type="submit" class="research-button"><span class="material-symbols-outlined">
+                    search
+                </span></button>
+        </form>
+    </header>
+
+    <main class="content">
+    
+        <!-- Article 0 -->
+        <article class="section" id="article-0">
+            <img src="./image/img-mai.jpg" alt="logo" class="circle" id="image-0">
+            <section class="text" id="section-0">
+                <a id="site-title-0" href="">Article Title 0</a>
+                <p id="site-desc-0">Description for article 0 goes here.</p>
+            </section>
+        </article>
+
+        <!-- Article 1 -->
+        <article class="section" id="article-1">
+            <img src="./image/img-mai.jpg" alt="logo" class="circle" id="image-1">
+            <section class="text" id="section-1">
+                <a id="site-title-1" href="">Article Title 1</a>
+                <p id="site-desc-1">Description for article 1 goes here.</p>
+            </section>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="section" id="article-2">
+            <img src="./image/img-mai.jpg" alt="logo" class="circle" id="image-2">
+            <section class="text" id="section-2">
+                <a id="site-title-2" href="">Article Title 2</a>
+                <p id="site-desc-2">Description for article 2 goes here.</p>
+            </section>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="item" id="article-3">
+            <img src="./image/img-mai.jpg" alt="logo" class="circle" id="image-3">
+            <section class="text" id="section-3">
+                <a id="site-title-3" href="">Article Title 3</a>
+                <p id="site-desc-3">Description for article 3 goes here.</p>
+            </section>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="item" id="article-4">
+            <img src="./image/img-mai.jpg" alt="logo" class="circle" id="image-4">
+            <section class="text" id="section-4">
+                <a id="site-title-4" href="">Article Title 4</a>
+                <p id="site-desc-4">Description for article 4 goes here.</p>
+            </section>
+        </article>
+
+
+
+        <form method="get" target="_self" id="pages-form">
+            <button class="pages-button" id="see-less">See less</button>
+            <button class="pages-button" id="see-more">See more</button>
+            <input type="text" name="research" placeholder="Search here:" class="page-input" id="text" required>
+            <input type="text" name="page" id="pageN" class="page-input" required>
+        </form>
+
+        <div class="not-found" id="notfound">
+            <h2 id="error-text">The term&nbsp;</h2>
+            <p>does not exist in our database</p>
+            <p>sorry for the encovenience</p>
+            <iframe src="https://giphy.com/embed/26uf2veW2vkZNjjuo" width="480" height="338" style="" frameBorder="0"
+                class="giphy-embed" allowFullScreen></iframe>
+            <p><a style="color: white; font-size: 10px; text-decoration: none;"
+                    href="https://giphy.com/gifs/southparkgifs-26uf2veW2vkZNjjuo">via GIPHY</a></p>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+<script src="./research.js"></script>
+
+</html>
