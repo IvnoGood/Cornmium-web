@@ -28,6 +28,7 @@ body {
     filter: invert(); /*change la couleur des images*/
     mix-blend-mode: lighten; /* change le fond des images*/
     width: 150px;
+
     
 }
 
@@ -38,7 +39,7 @@ body {
 }
 
 .search-bar {
-    width: 50%;
+    display: block;
     padding: 10px;
     border-radius: 20px;
     border: none;
@@ -48,6 +49,7 @@ body {
     min-width: 5px;
     font-size: 16px;
     color: #333;
+    align-items: end;
 
 }
 
