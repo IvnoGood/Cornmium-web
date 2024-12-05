@@ -117,6 +117,8 @@ async function research(textzoneValue, index, urlindex, csvfile) {
     let whileindex = 5;
     let numberofarticles = 5;
 
+    listOfUuid = {}
+
 
     if (pageValue == 0) {
         linkindex = 5;
@@ -177,66 +179,10 @@ async function research(textzoneValue, index, urlindex, csvfile) {
             }
 
             if (listOfUuid.length < whileindex) {
-                console.log(typeof (listOfUuid))
+                console.log("type of listOfUuid", typeof (listOfUuid));
                 whileindex = Number(listOfUuid?.length);
                 console.warn(`length of listuuid ${listOfUuid} and while index ${whileindex}`);
             }
-
-
-            listOfUuid.forEach(async link => {
-
-
-                while (websiteindex < whileindex) {
-                    /*                     let status = UrlExists(link)
-                                        console.log(status); */
-                    /*console.log("link index: ", linkindex);
-                    linkindex = Number(linkindex) + 1;*/
-
-                    const websiteAnchor = document.getElementById("site-title-" + websiteindex);
-                    const websiteLogo = document.getElementById("image-" + websiteindex);
-                    const websiteDescription = document.getElementById('site-desc-' + websiteindex);
-                    const websiteArticle = document.getElementById("article-" + websiteindex);
-
-                    if (!websiteAnchor || !websiteLogo || !websiteDescription) {
-                        console.warn(`Missing elements for websiteindex ${websiteindex}`);
-                        continue; // Skip to the next iteration
-                    }
-
-                    const links = urlindex[link]; //search for each uuid we have and transform it onto links
-                    //console.log(links);
-                    if (!links) {
-                        console.warn(`Missing link for websiteindex ${websiteindex}`);
-                        continue;
-                    }
-
-                    const csvData = await fetchCSV(csvfile);
-                    const parsedData = parseCSV(csvData);
-                    const title = getTitleByUrl(parsedData, links) || 'Default Title';
-                    const desc = getDescByUrl(parsedData, links) || 'Default Description';
-                    const Fav = getFavByUrl(parsedData, links) || '../image/logo.png';
-
-                    websiteLogo.onerror = () => (websiteLogo.src = '../image/errorlogo.png');
-                    websiteAnchor.href = links;
-                    websiteAnchor.innerHTML = title;
-                    websiteDescription.innerHTML = desc;
-                    websiteArticle.style.display = "flex";
-
-                    websiteLogo.src = Fav;
-
-                    /*  if (status != 404) {
-                         websiteLogo.src = "../image/logo.png";
-                         console.log("1");
-                         //websiteLogo.src = `https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.linuxfromscratch.org/lfs/downloads/stable/&size=16`;
- 
-                     } else {
- 
-                         websiteLogo.src = `https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${links}&size=16`;
-                         console.log("2");
-                     } */
-                    console.log("website index: ", websiteindex);
-                    websiteindex = Number(websiteindex) + 1;
-                }
-            });
         } else {
             console.log("no !!!");
             notFoundDiv.style.display = "block";
@@ -244,10 +190,54 @@ async function research(textzoneValue, index, urlindex, csvfile) {
             console.log(errorText.innerHTML)
             errorText.innerHTML = errorText.innerHTML + researchValue;
             console.log(errorText.value + researchValue)
+        }
 
+    });
+
+    listOfUuid.forEach(async link => {
+
+
+        while (websiteindex < whileindex) {
+
+            const websiteAnchor = document.getElementById("site-title-" + websiteindex);
+            const websiteLogo = document.getElementById("image-" + websiteindex);
+            const websiteDescription = document.getElementById('site-desc-' + websiteindex);
+            const websiteArticle = document.getElementById("article-" + websiteindex);
+
+            if (!websiteAnchor || !websiteLogo || !websiteDescription) {
+                console.warn(`Missing elements for websiteindex ${websiteindex}`);
+                continue; // Skip to the next iteration
+            }
+
+            const links = urlindex[link]; //search for each uuid we have and transform it onto links
+            //console.log(links);
+            if (!links) {
+                console.warn(`Missing link for websiteindex ${websiteindex}`);
+                continue;
+            }
+
+            const csvData = await fetchCSV(csvfile);
+            const parsedData = parseCSV(csvData);
+            const title = getTitleByUrl(parsedData, links) || 'Default Title';
+            const desc = getDescByUrl(parsedData, links) || 'Default Description';
+            const Fav = getFavByUrl(parsedData, links) || '../image/logo.png';
+
+            websiteLogo.onerror = () => (websiteLogo.src = '../image/errorlogo.png');
+            websiteAnchor.href = links;
+            websiteAnchor.innerHTML = title;
+            websiteDescription.innerHTML = desc;
+            websiteArticle.style.display = "flex";
+
+            websiteLogo.src = Fav;
+            console.log("website index: ", websiteindex);
+            websiteindex = Number(websiteindex) + 1;
         }
     });
+
 }
+
+
+
 
 Promise.all([fetchJSONData("../data/index.json"), fetchJSONData("../data/urlindex.json")])
     .then(([index, urlindex]) => {
