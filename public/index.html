@@ -1,98 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="x-ua-compatible" content="IE=11">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="IE=11" />
     <title>Research Page</title>
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="shortcut icon" href="./image/logo2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="shortcut icon" href="./image/logo2.ico" type="image/x-icon" />
 
     <!-- google fonts -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search"
+    />
 
     <style>
-        .material-symbols-outlined {
-            font-variation-settings:
-                'FILL' 0,
-                'wght' 400,
-                'GRAD' 0,
-                'opsz' 24
-        }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            <div class="theme-switch-wrapper">
-                <label class="theme-box" for="checkbox">
-                    <input type="checkbox" name="" id="checkbox">
-                    <div class="slider round">
-                        <span class="icon-sun" aria-hidden="true">☀️</span>
-                        <span class="icon-moon" aria-hidden="true">🌙</span>
-                    </div>
-                </label>
-                <em id="checkbox-text" style="color: var(--text-color);">Enable Dark Mode</em>
+      <nav>
+        <div class="theme-switch-wrapper">
+          <label class="theme-box" for="checkbox">
+            <input type="checkbox" name="" id="checkbox" />
+            <div class="slider round">
+              <span class="icon-sun" aria-hidden="true">☀️</span>
+              <span class="icon-moon" aria-hidden="true">🌙</span>
             </div>
-        </nav>
+          </label>
+          <em id="checkbox-text" style="color: var(--text-color)"
+            >Enable Dark Mode</em
+          >
+        </div>
+      </nav>
     </header>
     <form class="container" action="./pages/research.html" method="get">
-        <!-- Logo -->
-        <img src="./image/logo2.png" alt="Logo" class="logo">
+      <!-- Logo -->
+      <img
+        src="./image/logo2.png"
+        alt="Logo"
+        class="logo"
+        id="gay-image"
+        style="cursor: pointer"
+      />
 
-        <!-- Search Bar -->
-        <div class="research-fields">
-            <input type="text" name="research" placeholder="Search here:" class="search-bar" id="text" required>
-            <button type="submit" class="research-button-field"><span class="material-symbols-outlined">
-                    search
-                </span></button>
-            <input type="text" name="page" style="display: none;" id="page">
+      <div class="research-fields">
+        <input
+          type="text"
+          name="research"
+          placeholder="Search here:"
+          class="search-bar"
+          id="text"
+          required
+        />
+        <button type="submit" class="research-button-field">
+          <span class="material-symbols-outlined"> search </span>
+        </button>
+        <input type="text" name="page" style="display: none" id="page" />
+      </div>
+      <!-- <textarea name="text" id="text" class="search-bar" cols="1" rows="1"></textarea> -->
+      <!-- Button -->
+      <div class="info">
+        <p>the most secure browser to search your popcorn and corn videos</p>
+        <div class="image-container">
+          <img src="./image/img-cad.jpg" alt="" class="prv" />
         </div>
-        <!-- <textarea name="text" id="text" class="search-bar" cols="1" rows="1"></textarea> -->
-        <!-- Button -->
-        <div class="info">
-            <p>the most secure browser to search your popcorn and corn videos</p>
-            <div class="image-container">
-                <img src="./image/img-cad.jpg" alt="" class="prv">
-            </div>
-            <div class="image-container">
-                <img src="./image/img-pop.jpg" alt="" class="prv">
-            </div>
-            <div class="image-container">
-                <img src="./image/img-mai.jpg" alt="" class="prv">
-            </div>
-
+        <div class="image-container">
+          <img src="./image/img-pop.jpg" alt="" class="prv" />
         </div>
+        <div class="image-container">
+          <img src="./image/img-mai.jpg" alt="" class="prv" />
+        </div>
+      </div>
     </form>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-
-                <p class="info">Information</p>
-                <ul class="footer-links">
-                    <li><a href="./pages/information/privacy.html">Politique de confidentialité</a></li>
-                    <li><a href="./pages/information/terms.html">Conditions d'utilisation</a></li>
-                    <li><a href="./pages/information/fairuse.html">Conditions d'utilisation équitables</a></li>
-                </ul>
-            </div>
-            <div class="footer-work">
-                <p class="work">Travaillez avec nous</p>
-                <a href="https://github.com/IvnoGood" class="github-link">GitHub</a>
-                <p>&copy; 2024. Tous droits réservés.</p>
-            </div>
+      <div class="footer-content">
+        <div class="footer-info">
+          <p class="info">Information</p>
+          <ul class="footer-links">
+            <li>
+              <a href="./pages/information/privacy.html"
+                >Politique de confidentialité</a
+              >
+            </li>
+            <li>
+              <a href="./pages/information/terms.html"
+                >Conditions d'utilisation</a
+              >
+            </li>
+            <li>
+              <a href="./pages/information/fairuse.html"
+                >Conditions d'utilisation équitables</a
+              >
+            </li>
+          </ul>
         </div>
+        <div class="footer-work">
+          <p class="work">Travaillez avec nous</p>
+          <a href="https://github.com/IvnoGood" class="github-link">GitHub</a>
+          <p>&copy; 2024. Tous droits réservés.</p>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 
-<script src="./javascript/main.js"></script>
-<script src="./javascript/darkmode.js"></script>
-
-
+  <script src="./javascript/main.js"></script>
+  <script src="./javascript/darkmode.js"></script>
+  <script>
+    document.getElementById("gay-image").addEventListener("click", () => {
+      window.location.href = "./pages/info.html";
+    });
+  </script>
 </html>

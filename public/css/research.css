@@ -4,6 +4,7 @@ body {
     font-family: Arial, sans-serif;
     background: var(--background);
     color: white;
+    height: 100vh;
 }
 
 .material-symbols-outlined {

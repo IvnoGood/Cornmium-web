@@ -31,7 +31,9 @@ a {
   
 }
 
-
+.material-symbols-outlined{
+  margin-top: 0;
+}
 .first-text p, .second-text p, .article p, .join{
   font-size: large;
   line-height: 1.6; /* Espacement entre les lignes */
@@ -80,7 +82,7 @@ a {
   position: absolute;
   width: 0;
   height: 2px;
-  background-color: #3a8dde;
+  background-color: var(--placeholders);
   transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
 }
 
@@ -111,7 +113,7 @@ a {
   position: absolute;
   width: 2px;
   height: 0;
-  background-color: #3a8dde;
+  background-color: var(--placeholders);
   transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
 }
 
@@ -152,7 +154,7 @@ a {
 .buttons button p:after {
   content: attr(data-text);
   top: 150%;
-  color: #3a8dde;
+  color: var(--placeholders);
 }
 
 .buttons button:hover:before, .buttons button:hover:after {
@@ -178,7 +180,7 @@ a {
 }
 
 .buttons button.start {
-  background-color: #3a8dde;
+  background-color: var(--placeholders);
   box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease;
 }
@@ -363,7 +365,7 @@ body {
   list-style-type: none;
   width: 160px;
   height: 5px;
-  background: #3a8dde;
+  background: var(--placeholders);
   scroll-snap-align: start;
 }
 
@@ -385,7 +387,7 @@ body {
   height: 16px;
   transform: translateY(-50%);
   border-radius: 50%;
-  background: #3a8dde;
+  background: var(--placeholders);
   z-index: 1;
 }
 
@@ -397,7 +399,7 @@ body {
   font-size: 1rem;
   white-space: normal;
   color: white;
-  background: #3a8dde;
+  background: var(--placeholders);
   border-radius: 0 10px 10px 10px;
 }
 
@@ -421,7 +423,7 @@ body {
   top: 100%;
   border-width: 8px 8px 0 8px;
  
-  border-color: transparent transparent transparent #3a8dde;
+  border-color: transparent transparent transparent var(--placeholders);
 }
 
 .timeline ol li:nth-child(even) div {
@@ -431,7 +433,7 @@ body {
 .timeline ol li:nth-child(even) div::before {
   top: -8px;
   border-width: 8px 0 0 8px;
-  border-color: transparent transparent transparent #3a8dde;
+  border-color: transparent transparent transparent var(--placeholders);
 }
 
 .timeline time {

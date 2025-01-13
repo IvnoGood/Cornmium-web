@@ -13,8 +13,8 @@ function setPalette(isOn) {
         document.documentElement.style.setProperty('--text-color', '#ffffff');
     } else {
         switchText.innerHTML = "Enable Dark Mode";
-        document.documentElement.style.setProperty('--background-inverse', 'linear-gradient(to left, #3a8dde, #a1c4fd)');
-        document.documentElement.style.setProperty('--background', 'linear-gradient(to right, #3a8dde, #a1c4fd)');
+        document.documentElement.style.setProperty('--background-inverse', 'linear-gradient(to left, #var(--placeholders), #a1c4fd)');
+        document.documentElement.style.setProperty('--background', 'linear-gradient(to right, #var(--placeholders), #a1c4fd)');
         document.documentElement.style.setProperty('--background-header', 'linear-gradient(to right, #1c4dab, #6a8edd)');
         document.documentElement.style.setProperty('--accent-color', 'black');
         document.documentElement.style.setProperty('--accent-color-hover', 'rgb(114, 114, 114)');

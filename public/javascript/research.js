@@ -10,7 +10,6 @@ let seeMoreButton = document.getElementById('see-more');
 const errorText = document.getElementById("error-text");
 const notFoundDiv = document.getElementById("notfound");
 // Print the value to the console or display it on the page
-console.log(researchValue);
 document.getElementById('text').value = researchValue;  // assuming you have an element with id "output"
 
 if (pageValue == null) {
@@ -100,11 +99,10 @@ function UrlExists(url) {
 }
 
 
-async function research(textzoneValue, index, urlindex, csvfile) {
+async function research(textzoneValue, index, urlindex, csvfile, pageValue) {
     words = textzoneValue.split(" "); //TODO: lowercase
     console.log(`words: ${words}`);
 
-    let pageValue = Number(params.get('page'));
 
     let websiteindex = 0;
     let linkindex = 0;
@@ -252,7 +250,7 @@ async function research(textzoneValue, index, urlindex, csvfile) {
 Promise.all([fetchJSONData("../data/index.json"), fetchJSONData("../data/urlindex.json")])
     .then(([index, urlindex]) => {
         if (index && urlindex) {
-            research(researchValue, index, urlindex, csvfile);
+            research(researchValue, index, urlindex, csvfile, pageValue);
         } else {
             console.error("Failed to fetch data from one or both JSON files");
         }

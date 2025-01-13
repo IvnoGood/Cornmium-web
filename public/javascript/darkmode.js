@@ -48,17 +48,12 @@ function setPalette(isOn) {
 }
 
 let isOn = localStorage.getItem('isOn') === 'true'; // Ensure it's a boolean
-console.log("isOn: ", isOn);
-console.log("checkbox value: ", document.getElementById("checkbox").checked);
 checkbox.checked = isOn;
 setPalette(isOn);
 
 
 checkbox.addEventListener("change", () => {
-    console.log("click !")
-    console.log("checkbox value: ", document.getElementById("checkbox").checked);
     isOn = !isOn;
-    console.log("isOn: ", isOn)
     localStorage.setItem('isOn', isOn.toString());
     setPalette(isOn);
 });

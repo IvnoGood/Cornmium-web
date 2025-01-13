@@ -6,19 +6,19 @@ footer {
     /* simple padding */
     text-align: center;
     /* Centrer le texte */
-    margin-top: auto;
-    /* Permet de pousser le footer vers le bas */
+   
     width: 100%;
     position: relative;
     height: fit-content;
-    margin-top: auto;
+    bottom: 0;
+    
 }
-
 .footer-content {
     max-width: 1200px;
     /* Largeur maximale du footer */
     margin: 0 auto;
     /* Centrer le footer */
+
 }
 
 .footer-info {
@@ -70,4 +70,3 @@ footer {
     color: #1e5b85;
     /* Couleur au survol */
 }
-
